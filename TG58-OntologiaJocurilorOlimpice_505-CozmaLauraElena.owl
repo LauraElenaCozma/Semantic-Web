@@ -1,0 +1,1937 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#"
+     xml:base="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OlympicGames="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames">
+        <rdfs:comment>Ontology describing the Olympic Games</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasAthlete -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasAthlete"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEdition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEdition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEvent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEvent">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#belongsToDiscipline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#belongsToDiscipline">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEvent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#belongsToSport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#belongsToSport">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasDiscipline"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Sport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasDiscipline -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasDiscipline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Sport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEditionForResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEditionForResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEvent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEventForResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasEventForResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasMedal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasMedal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasResult"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isGainedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasRanking -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasRanking">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasResult"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hasResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isGainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isGainedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedInSummer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedInSummer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerYouthOlympicGames"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedInWinter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedInWinter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isPlayedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterSport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterOlympicGames"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterYouthOlympicGames"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isRepresentedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#represents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isTrainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#isTrainedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#trains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#participates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#participates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#represents">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#trains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#trains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#firstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#fullName"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#fullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#fullName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hostCity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#hostCity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#lastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#fullName"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ranking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ranking">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bronze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bronze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Coach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Coach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DuetEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DuetEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Nutritionist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Nutritionist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalStaff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalStaff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Results"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SeniorOlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SeniorOlympicGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Silver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Silver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Medal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Sport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Sport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Participant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SeniorOlympicGames"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Basketball"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CanoeingKayaking"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Cycling"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Equestrian"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gymnastics"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Wrestling"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Sport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerYouthOlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerYouthOlympicGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#YouthOlympicGames"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TeamEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TeamEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterOlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterOlympicGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SeniorOlympicGames"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterSport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterSport">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bobsleigh"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skating"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skiing"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Sport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterYouthOlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterYouthOlympicGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#YouthOlympicGames"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#YouthOlympicGames -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#YouthOlympicGames">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#OlympicGames"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#1stPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#1stPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#2ndPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#2ndPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#3rdPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#3rdPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#5thPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#5thPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#6thPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#6thPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#7thPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#7thPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#8thPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#8thPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Ranking"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AdrienVonfeld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AdrienVonfeld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">39</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EteriTutberidze"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#NatalyaKolesnikova"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Russia"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">19</age>
+        <firstName>Alina</firstName>
+        <fullName>Alina Zagitova</fullName>
+        <lastName>Zagitova</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2022"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EteriTutberidze"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#NatalyaKolesnikova"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Russia"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">17</age>
+        <firstName>Anna</firstName>
+        <fullName>Anna Shcherbakova</fullName>
+        <lastName>Shcherbakova</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticSwimming"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Diving"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gymnastics"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFloor"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenVault"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticSwimming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticSwimming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Atena2004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Atena2004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>Atena</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2004</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Football"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Handball"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tennis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Basketball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Basketball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>Beijing</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2008</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterOlympicGames"/>
+        <hostCity>Beijing</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2022</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bobsleigh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bobsleigh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Brisbane2032 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Brisbane2032">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>Brisbane</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2032</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzePairsFigureSkating2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzePairsFigureSkating2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bronze"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PairSkating"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EricRadford"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MeaganDuhamel"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzeWomenBalanceBeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzeWomenBalanceBeam2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bronze"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SimoneBiles"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BuenosAires2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BuenosAires2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerYouthOlympicGames"/>
+        <hostCity>BuenosAires</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100Freestyle2020"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100MetresFly2020"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2016"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2020"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold50Freestyle2020"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#UnitedStates"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">26</age>
+        <firstName>Caeleb</firstName>
+        <fullName>Caeleb Dressel</fullName>
+        <lastName>Dressel</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EricRadford"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MeaganDuhamel"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ScottMoir"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TessaVirtue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CanoeingKayaking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CanoeingKayaking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CatalinaPonor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CatalinaPonor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2004"/>
+        <hasResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2004"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LucianNicolescu"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Atena2004"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">30</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Cycling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Cycling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaBulimar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaBulimar">
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LucianNicolescu"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">16</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaChelaru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaChelaru">
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LucianNicolescu"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">16</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Diving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Diving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Equestrian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Equestrian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EricRadford -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EricRadford">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzePairsFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">25</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EteriTutberidze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EteriTutberidze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Coach"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#KamilaValieva"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">49</age>
+        <firstName>Eteri</firstName>
+        <fullName>Eteri Tutberidze</fullName>
+        <lastName>Tutberidze</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FenLi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FenLi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">52</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skating"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingle"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PairSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Football -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Football">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenFootball"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFootball"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2022"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverIceDanceFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AdrienVonfeld"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RomainHaguenauer"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#France"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">27</age>
+        <firstName>Gabriella</firstName>
+        <fullName>Gabriella Papadakis</fullName>
+        <lastName>Papadakis</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gangwon2024 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gangwon2024">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterYouthOlympicGames"/>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2024</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100Freestyle2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100Freestyle2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFreestyle"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100MetresFly2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100MetresFly2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFly"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RioDeJaneiro2016"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4x100MetresFreestyle"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4x100MetresFreestyle"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold50Freestyle2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold50Freestyle2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#50MetresFreestyle"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Atena2004"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CatalinaPonor"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2020">
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuanChenchen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ScottMoir"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TessaVirtue"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenBalanceBeam2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenBalanceBeam2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LarisaIordache"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenFloor2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenFloor2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2008"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFloor"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenVault2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenVault2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenVault"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SandraIzbasa"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuanChenchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuanChenchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2020"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#China"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2022"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverIceDanceFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AdrienVonfeld"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RomainHaguenauer"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#France"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">28</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gymnastics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gymnastics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmicGymnastics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Handball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Handball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DuetEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#KamilaValieva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#KamilaValieva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasRanking rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thLadiesFigureSkating2022"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EteriTutberidze"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Russia"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">16</age>
+        <firstName>Kamila</firstName>
+        <fullName>Kamila Valieva</fullName>
+        <lastName>Valieva</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LarisaIordache -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LarisaIordache">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">18</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>London</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2012</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LosAngeles2028 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LosAngeles2028">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2028</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LucianNicolescu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LucianNicolescu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CatalinaPonor"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaBulimar"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaChelaru"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">30</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Lusanne2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Lusanne2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterYouthOlympicGames"/>
+        <hostCity>Lausanne</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MeaganDuhamel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MeaganDuhamel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzePairsFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">25</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenDoublesTennis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenDoublesTennis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DuetEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tennis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenFootball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenFootball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TeamEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Football"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingleTennis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingleTennis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tennis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MichaelSpence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MichaelSpence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SimoneBiles"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">32</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MilanoCortina2026 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MilanoCortina2026">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterOlympicGames"/>
+        <hostCity>Milano Cortina</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2026</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MyKaylaSkinner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MyKaylaSkinner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenVault2012"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#UnitedStates"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">18</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#NatalyaKolesnikova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#NatalyaKolesnikova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PhysicalTrainer"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">30</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PairSkating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PairSkating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DuetEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Paris2024 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Paris2024">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>Paris</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2024</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Coach"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EricRadford"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MeaganDuhamel"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ScottMoir"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TessaVirtue"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">50</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PavelTsatsouline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PavelTsatsouline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Nutritionist"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">60</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterOlympicGames"/>
+        <hostCity>PyeongChang</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2018</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RioDeJaneiro2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RioDeJaneiro2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>Rio de Janeiro</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2016</year>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RomainHaguenauer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RomainHaguenauer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Coach"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">41</age>
+        <firstName>Romain</firstName>
+        <fullName>Romain Haguenauer</fullName>
+        <lastName>Haguenauer</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CatalinaPonor"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaBulimar"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaChelaru"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LarisaIordache"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SandraIzbasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Russia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Russia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#KamilaValieva"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmDance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmDance">
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmicGymnastics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmicGymnastics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gymnastics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SamuelChouinard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SamuelChouinard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Coach"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+        <trains rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">63</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SandraIzbasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SandraIzbasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenFloor2008"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenVault2012"/>
+        <hasResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenFloor2008"/>
+        <hasResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenVault2012"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2008"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">29</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ScottMoir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ScottMoir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2018"/>
+        <hasResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">27</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverIceDanceFigureSkating2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverIceDanceFigureSkating2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Silver"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenBeam2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenBeam2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Silver"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenFloor2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenFloor2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Silver"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFloor"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TangXijing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenVault2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenVault2012">
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenVault"/>
+        <isGainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MyKaylaSkinner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SimoneBiles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SimoneBiles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzeWomenBalanceBeam2020"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MichaelSpence"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#UnitedStates"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">25</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterSport"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+        <hasDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SpeedSkating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skiing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skiing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WinterSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SpeedSkating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SpeedSkating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFly"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFreestyle"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4x100MetresFreestyle"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#50MetresFreestyle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TangXijing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TangXijing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#China"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">21</age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tennis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tennis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Discipline"/>
+        <belongsToSport rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenDoublesTennis"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingleTennis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TessaVirtue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TessaVirtue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Athlete"/>
+        <hasMedal rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2018"/>
+        <isTrainedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon"/>
+        <participates rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+        <represents rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerOlympicGames"/>
+        <hostCity>Tokyo</hostCity>
+        <year rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2020</year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#UnitedStates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#UnitedStates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Country"/>
+        <isRepresentedBy rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFloor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFloor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFootball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFootball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TeamEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Football"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenVault -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenVault">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Wrestling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Wrestling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SummerSport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFreestyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFreestyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thLadiesFigureSkating2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thLadiesFigureSkating2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thPlace"/>
+        <hasEditionForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022"/>
+        <hasEventForResult rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle"/>
+        <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</ranking>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4x100MetresFreestyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4x100MetresFreestyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#50MetresFreestyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#50MetresFreestyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IndividualEvent"/>
+        <belongsToDiscipline rdf:resource="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AdrienVonfeld"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AlinaZagitova"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#AnnaShcherbakova"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Aquatics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticGymnastics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ArtisticSwimming"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Atena2004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BaseballAndSoftball"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Basketball"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2008"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Beijing2022"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Bobsleigh"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Brisbane2032"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzePairsFigureSkating2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BronzeWomenBalanceBeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#BuenosAires2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CaelebDressel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Canada"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CanoeingKayaking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#CatalinaPonor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#China"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Cycling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaBulimar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#DianaChelaru"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Diving"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Equestrian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EricRadford"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#EteriTutberidze"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FenLi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#FigureSkating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Football"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#France"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GabriellaPapadakis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gangwon2024"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100Freestyle2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold100MetresFly2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2016"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold4x100MetresFreestyle2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gold50Freestyle2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldBalanceBeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldIceDanceFigureSkating2022"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldLadiesFigureSkating2022"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenBalanceBeam2012"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenFloor2008"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GoldWomenVault2012"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuanChenchen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#GuillaumeCizeron"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Gymnastics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Handball"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#IceDance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Italy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#KamilaValieva"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LadiesSingle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LarisaIordache"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#London2012"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LosAngeles2028"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#LucianNicolescu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Lusanne2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MeaganDuhamel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenDoublesTennis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenFootball"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MenSingleTennis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MichaelSpence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MilanoCortina2026"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#MyKaylaSkinner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#NatalyaKolesnikova"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PairSkating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Paris2024"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PatriceLauzon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PavelTsatsouline"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#PyeongChang2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RioDeJaneiro2016"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RomainHaguenauer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Romania"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Russia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmDance"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#RythmicGymnastics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SamuelChouinard"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SandraIzbasa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#ScottMoir"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverIceDanceFigureSkating2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenBeam2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenFloor2012"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SilverWomenVault2012"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SimoneBiles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Skiing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#SpeedSkating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Swimming"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TangXijing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tennis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#TessaVirtue"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Tokyo2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#UnitedStates"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenBalanceBeam"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFloor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenFootball"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#WomenVault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#Wrestling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFly"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#100MetresFreestyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4thLadiesFigureSkating2022"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#4x100MetresFreestyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cozma/ontologies/2023/2/OlympicGames#50MetresFreestyle"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
